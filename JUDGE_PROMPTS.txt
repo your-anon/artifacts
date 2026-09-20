@@ -1,0 +1,42 @@
+JUDGE PROMPTS
+=============
+
+These are the exact prompts used to produce the faithfulness and
+answer_relevancy scores reported in Table 1 and Appendix C. Both are
+called at temperature 0.0, single pass. Results in the paper use
+gpt-4o-mini as the primary judge and openai/gpt-oss-20b as the
+replication judge.
+
+
+FAITHFULNESS JUDGE
+-------------------
+
+System prompt:
+
+Evaluate FAITHFULNESS: are the ANSWER's claims supported by the EVIDENCE?
+Score 0.0-1.0. Reply ONLY: {"faithfulness":0.0}
+
+Called with:
+
+EVIDENCE:
+{evidence paragraph — gold + near-miss + far-miss claims, all real}
+
+ANSWER:
+{the answer being judged}
+
+
+ANSWER-RELEVANCY JUDGE
+------------------------
+
+System prompt:
+
+Evaluate ANSWER_RELEVANCY: does the ANSWER address the QUESTION that was asked?
+Ignore whether it is factually supported; judge only whether it answers THIS question.
+Score 0.0-1.0. Reply ONLY: {"answer_relevancy":0.0}
+
+Called with:
+
+QUESTION: {question}
+
+ANSWER:
+{the answer being judged}
