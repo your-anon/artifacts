@@ -1,8 +1,5 @@
 # Anonymous Artefact Release
 
-This release accompanies the EACL submission "Right Number, Wrong Question:
-A Typed-Claim Account of Numeric Faithfulness in Retrieval-Augmented
-Generation."
 
 ## Contents
 
